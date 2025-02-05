@@ -20,7 +20,7 @@ class LLMChatRequestSerializer(serializers.Serializer):
         default=OpenAIModels.default().value
     )
     temperature = serializers.FloatField(default=1, min_value=0, max_value=1)
-    max_tokens = serializers.IntegerField(default=10000, min_value=1, max_value=10000)
+    max_tokens = serializers.IntegerField(default=100000, min_value=1, max_value=100000)
 
     def validate_messages(self, value):
         for message in value:
@@ -33,3 +33,6 @@ class LLMChatRequestSerializer(serializers.Serializer):
                     "Message role must be one of: system, user, assistant"
                 )
         return value
+
+class DocumentProcessingSerializer(serializers.Serializer):
+    filename = serializers.CharField(required=True)
