@@ -1,7 +1,7 @@
 import os
 from typing import Optional
-from .base import LLMClient
-from .providers.openai_provider import OpenAIClient
+from api.llm.base import LLMClient
+from api.llm.providers.openai_provider import OpenAIClient
 
 class LLMFactory:
     @staticmethod

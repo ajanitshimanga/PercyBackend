@@ -2,10 +2,10 @@ from django.shortcuts import render
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from .models import Item
-from .serializers import ItemSerializer, LLMChatRequestSerializer
-from .llm import LLMFactory
-from .llm.models import OpenAIModels
+from api.models import Item
+from api.serializers import ItemSerializer, LLMChatRequestSerializer
+from api.llm import LLMFactory
+from api.llm.models import OpenAIModels
 import asyncio
 
 # Create your views here.

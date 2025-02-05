@@ -1,7 +1,7 @@
 from typing import List, Dict, Any
 from openai import AsyncOpenAI
-from ..base import LLMClient
-from ..models import OpenAIModels
+from api.llm.base import LLMClient
+from api.llm.models import OpenAIModels
 
 class OpenAIClient(LLMClient):
     def __init__(self, api_key: str):

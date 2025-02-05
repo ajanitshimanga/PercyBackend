@@ -1,6 +1,6 @@
 from rest_framework import serializers
-from .models import Item
-from .llm.models import OpenAIModels
+from api.models import Item
+from api.llm.models import OpenAIModels
 
 class ItemSerializer(serializers.ModelSerializer):
     class Meta:
